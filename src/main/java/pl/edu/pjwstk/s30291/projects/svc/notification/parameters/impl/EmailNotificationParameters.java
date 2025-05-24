@@ -1,15 +1,22 @@
 package pl.edu.pjwstk.s30291.projects.svc.notification.parameters.impl;
 
-import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import pl.edu.pjwstk.s30291.projects.svc.notification.parameters.NotificationParameters;
+import pl.edu.pjwstk.s30291.projects.svc.notification.parameters.type.NotificationParametersType;
 
-@AllArgsConstructor
-@NoArgsConstructor
 public class EmailNotificationParameters extends NotificationParameters {
+	
+	@Deprecated
+	public EmailNotificationParameters() {
+		super(NotificationParametersType.EMAIL);
+	}
+	
+	public EmailNotificationParameters(String email, String title) {
+		this();
+		this.email = email;
+		this.title = title;
+	}
 
 	@Getter private String email;
 	@Getter private String title;

@@ -1,5 +1,7 @@
 package pl.edu.pjwstk.s30291.projects.svc.notification.service;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
 
+import lombok.extern.slf4j.Slf4j;
 import pl.edu.pjwstk.s30291.projects.svc.notification.Notification;
 import pl.edu.pjwstk.s30291.projects.svc.notification.listener.NotificationListener;
 import pl.edu.pjwstk.s30291.projects.svc.notification.listener.impl.EmailNotificationListener;
@@ -16,6 +19,7 @@ import pl.edu.pjwstk.s30291.projects.svc.notification.parameters.NotificationPar
 import pl.edu.pjwstk.s30291.projects.svc.notification.parameters.type.NotificationParametersType;
 
 @Service
+@Slf4j
 public class NotificationService {
 	
 	@SuppressWarnings("rawtypes")

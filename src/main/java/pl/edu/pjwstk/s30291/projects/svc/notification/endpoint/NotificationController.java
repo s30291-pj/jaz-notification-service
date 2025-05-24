@@ -9,11 +9,11 @@ import pl.edu.pjwstk.s30291.projects.svc.notification.Notification;
 import pl.edu.pjwstk.s30291.projects.svc.notification.service.NotificationService;
 
 @RestController
-public class NotificationEndpoint {
+public class NotificationController {
 
 	private NotificationService service;
 	
-	public NotificationEndpoint(NotificationService service) {
+	public NotificationController(NotificationService service) {
 		this.service = service;
 	}
 	

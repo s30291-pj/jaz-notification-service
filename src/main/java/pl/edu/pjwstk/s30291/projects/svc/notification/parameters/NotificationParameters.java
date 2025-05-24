@@ -6,4 +6,8 @@ import pl.edu.pjwstk.s30291.projects.svc.notification.parameters.type.Notificati
 public class NotificationParameters {
 
 	@Getter private NotificationParametersType parametersType;
+	
+	public NotificationParameters(NotificationParametersType parametersType) {
+		this.parametersType = parametersType;
+	}
 }
