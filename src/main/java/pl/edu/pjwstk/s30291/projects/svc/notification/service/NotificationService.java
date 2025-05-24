@@ -33,12 +33,13 @@ public class NotificationService {
 		listeners.put(push.getParametersType(), push);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void send(Notification notification) {
 		
 		for(String paramRAW : notification.getParameters()) {
 			NotificationParameters param = gson.fromJson(paramRAW, NotificationParameters.class);
 			
-			NotificationListener listener = listeners.get(param.getParametersType());
+			NotificationListener<NotificationParameters> listener = listeners.get(param.getParametersType());
 			
 			NotificationParameters castedParam = (NotificationParameters) gson.fromJson(paramRAW, listener.getParametersClass());
 			
