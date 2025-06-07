@@ -11,7 +11,7 @@ public class SMSNotificationListener implements NotificationListener<SMSNotifica
 
 	@Override
 	public void send(String message, SMSNotificationParameters parameters) {
-		System.out.println("EMAIL > Wyslano SMS na numer %s z notyfikacja: %s".formatted(
+		System.out.println("SMS > Wyslano SMS na numer %s z notyfikacja: %s".formatted(
 				parameters.getNumber(), message)
 		);
 	}
